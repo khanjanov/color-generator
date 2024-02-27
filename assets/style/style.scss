@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import "./mixvarres/reset";
 @import "./mixvarres/mixins";
+@import "./mixvarres/variables";
 .wrapper {
   width: 800px;
   height: 480px;
@@ -11,19 +12,17 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: white;
   padding: 40px 44px;
   border-radius: 12px;
-  background-color: #8fbabc;
+  background-color: $wrapper-bck-color;
   @include mobile {
     width: 352px;
   }
   &__top {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    justify-content: center;
-    align-items: center;
-    background-color: #f5cd2d;
+    @include justify_align_center;
+    background-color: $base-color;
     border-radius: 12px;
     @include mobile {
       width: 276px;
@@ -32,8 +31,7 @@
     &__left {
       width: 356px;
       height: 160px;
-      border-top-left-radius: 12px;
-      border-bottom-left-radius: 12px;
+      @include border_top_btm_left;
       @include mobile {
         width: 108px;
         height: 140px;
@@ -42,21 +40,17 @@
     &__right {
       width: 356px;
       height: 160px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+      @include flex_fdc_jna_center;
       gap: 20px;
-      background-color: #43b3ae;
-      border-top-right-radius: 12px;
-      border-bottom-right-radius: 12px;
+      background-color: $copy-div-bck-color;
+      @include border_top_btm_right;
       @include mobile {
         width: 168px;
         height: 140px;
       }
       h4 {
         text-align: center;
-        background-color: #f5cd2d;
+        background-color: $base-color;
         border-radius: 8px;
         padding: 12px 60px;
         @include mobile {
@@ -67,7 +61,7 @@
         border: none;
         border-radius: 8px;
         padding: 8px 12px;
-        background-color: #71ffbf;
+        background-color: $copy-btn-color;
       }
     }
   }
@@ -76,8 +70,7 @@
     height: 260px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    justify-content: space-between;
-    align-items: center;
+    @include justify_align_center;
     border-radius: 12px;
     @include mobile {
       width: 276px;
@@ -86,14 +79,10 @@
     &__left {
       width: 356px;
       height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+      @include flex_fdc_jna_center;
       gap: 20px;
-      background-color: #71a1ff;
-      border-top-left-radius: 12px;
-      border-bottom-left-radius: 12px;
+      background-color: $choose-div-bck-color;
+      @include border_top_btm_left;
       @include mobile {
         width: 138px;
         height: 252px;
@@ -122,14 +111,10 @@
     &__right {
       width: 356px;
       height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+      @include flex_fdc_jna_center;
       gap: 20px;
-      background-color: #7e4e98;
-      border-top-right-radius: 12px;
-      border-bottom-right-radius: 12px;
+      background-color: $generate-random-div-bck-color;
+      @include border_top_btm_right;
       @include mobile {
         width: 138px;
         height: 100%;
@@ -143,7 +128,7 @@
       button {
         width: 80px;
         height: 32px;
-        background-color: #f5cd2d;
+        background-color: $base-color;
         border-radius: 15px;
         border: none;
         cursor: pointer;

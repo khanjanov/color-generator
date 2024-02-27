@@ -3,3 +3,20 @@
     @content;
   }
 }
+@mixin justify_align_center {
+  justify-content: center;
+  align-items: center;
+}
+@mixin flex_fdc_jna_center {
+  @include align_justify_center;
+  display: flex;
+  flex-direction: column;
+}
+@mixin border_top_btm_left {
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+}
+@mixin border_top_btm_right {
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
