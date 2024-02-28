@@ -8,7 +8,7 @@
   align-items: center;
 }
 @mixin flex_fdc_jna_center {
-  @include align_justify_center;
+  @include justify_align_center;
   display: flex;
   flex-direction: column;
 }

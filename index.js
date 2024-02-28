@@ -3,6 +3,13 @@ $(document).ready(() => {
   $("#copy").click(() => {
     let copiedText = $("#clipboard").text();
     navigator.clipboard.writeText(copiedText);
+    $popup = $(".popup").css({
+      top: "-20%",
+      backgroundColor: $("#clipboard").text(),
+    });
+    setTimeout(() => {
+      $popup.css("top", "-120%");
+    }, 1100);
   });
 
   // generate color by yourself
